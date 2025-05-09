@@ -1,6 +1,5 @@
 #Real-Time-Chat-App with Profanity Checker
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
 
 Highlights:
 
