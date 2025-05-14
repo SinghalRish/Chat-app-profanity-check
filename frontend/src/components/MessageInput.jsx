@@ -33,16 +33,18 @@ const MessageInput = () => {
     if (!text.trim() && !imagePreview) return;
     
   const messageContent = text.trim();
+  const messageToCheck = messageContent.toLowerCase();
+
 
   // Step 1: Check for profanity using your API
-  if (messageContent) {
+  if (messageToCheck) {
     try {
       const response = await fetch('https://vector.profanity.dev', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ message: messageContent })
+        body: JSON.stringify({ message: messageToCheck })
       });
 
       const data = await response.json();
